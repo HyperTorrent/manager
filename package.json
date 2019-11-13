@@ -1,0 +1,38 @@
+{
+  "name": "@hypertorrent/manager",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "git@github.com:HyperTorrent/manager.git",
+  "main": "dist/manager.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint src",
+    "nm-build": "nodemon -w src -e js -x npm run build",
+    "nm-lint": "nodemon -w src -e js -x npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony DUBURQUE",
+  "license": "MIT",
+  "dependencies": {
+    "@hypertorrent/debug": "^1.0.0",
+    "@hypertorrent/torrent": "^1.0.0",
+    "fs-extra": "^8.1.0",
+    "hat": "0.0.3",
+    "p-all": "^2.1.0",
+    "p-if": "^2.1.0",
+    "pascalcase": "^1.0.0",
+    "pify": "^4.0.1",
+    "simple-get": "^3.1.0",
+    "stream-throttle": "^0.1.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.4"
+  }
+}
