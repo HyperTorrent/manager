@@ -92,6 +92,20 @@ export default class Manager extends EventEmitter {
       .catch((err) => { this.emit('error', err); });
   }
 
+  remove(infoHash) {
+    this.debug(`remove ${infoHash}`);
+    const torrent = this.get(infoHash);
+
+    if (torrent !== null) {
+      return torrent.destroy()
+        .then(() => {
+          this.torrents = this.torrents.filter((t) => t.infoHash !== infoHash);
+        });
+    }
+
+    return Promise.resolve();
+  }
+
   start(infoHash) {
     this.debug('start');
 
