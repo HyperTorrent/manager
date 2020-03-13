@@ -29,7 +29,7 @@ export default class Manager extends EventEmitter {
     const versionStr = version
       .replace(/\d*./g, (v) => `0${v % 100}`.slice(-2))
       .slice(0, 4);
-    this.peerId = `-HT${versionStr}-`.concat(hat(48));
+    this.peerId = options.peerId || `-HT${versionStr}-`.concat(hat(48));
     this.userAgent = `${pascalcase(name)}/${version}`;
     this.path = options.path;
     this.port = options.port || DEFAULT_PORT;
