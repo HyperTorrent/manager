@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@hypertorrent/debug": "^1.0.2",
-    "@hypertorrent/torrent": "^1.0.3",
+    "@hypertorrent/torrent": "^1.0.4",
     "fs-extra": "^9.1.0",
     "hat": "0.0.3",
     "p-all": "^3.0.0",
